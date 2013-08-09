@@ -53,7 +53,7 @@ header h1{
 	border-radius: 5px;
 }
 
-header p{
+header h2{
 text-transform: lowercase;
 	font-size: 16px;
 	color: #b0ddfd;
