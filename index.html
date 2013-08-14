@@ -1,158 +1,49 @@
-<!doctype html>  
-<html lang="en">
+<!DOCTYPE html>
+<!-- Sabra May-->
+<!-- VFW 1307 -->
+<!--Aug 1, 2013 -->
+<html>
 <head>
-
-	<meta charset="utf-8">
-	
+	<meta charset="utf-8"/>
+	<meta name="keywords" content="applications, app, apps, iphone apps"/>
+	<meta name="description" content="Store all your app ideas so you don't forget!"/>
+	<meta name="robots" content="index, follow"/>
+	<meta name="viewport" content="user-scalable=no, width=device-width"/>
+	<meta name="HandheldFriendly" content="true"/>
+	<meta name="MobileOptimized" content="320"/>	
 	<title>An app for all my apps</title>
-	
-	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
-	
-	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<link rel="stylesheet" href="CSS/style.css" />
-	
-	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-	<script src="js/libs/modernizr.custom.min.js"></script>
-
+<link rel="stylesheet" href="CSS/style.css" type="text/css" />
 </head>
 <body>
-<!-- index page -->
-	
-	<div data-role="page" id="index">
-	
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>An app for my apps</h1>
-		</div>
-		
-		<div data-role="content">
-			<center><img src="images/lightbulb.png"></center>
-			<p>Store all the great ideas you have for creating new apps!</p>
-			<p><a href="#additem" data-role="button">Add Idea</a></p>
+<div id="content">
+	<header>
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="images/lightbulb.png"></a>
+	<h1>An app for all my apps</h1>
+	<h2>Never forget a great idea again</h2>
+	</header>
+		<div>	
+		<a href="additem.html">
+	<!--<input class="button" type="submit" value="Add Item">-->
+	<input type="submit" value="Add Idea" id="submit"/>
+		</a>
 		</div>	
-		<!-- Search field -->
-		<input type="search" name="search" id="search-basic" value="" placeholder="Search Ideas" />
-							
-		<!-- index page footer -->		
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-		</div>	
-	</div>
-<!-- additem page -->	
-	<div data-role="page" id="additem" data-add-back-btn="true">
-	
-		<div data-role="header" data-position="fixed">
-			<h1>An app for my apps</h1>
-		</div>
-		
-		<div data-role="content">
-			<center><img src="images/lightbulb.png"></center>
-			<center><p>Here you could add your great idea</p></center>
-		</div>	
-	<!-- additem page footer -->	
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>				
-<!-- browse page -->
-	<div data-role="page" id="Browse" data-add-back-btn="true">
-	
-		<div data-role="header" data-position="fixed">
-			<h1>An app for my apps</h1>
-		</div>
-		
-		<div data-role="content">
-			
-		<div data-role="browse">
-		<ul data-role="listview">
-			<li data-role="list-divider" data-theme="e">Browse Categories</li>
-			<li><a href="#category" data-ajax="false">Games</a></li>
-			<li><a href="#category" data-ajax="false">Productivity</a></li>
-			<li><a href="#category" data-ajax="false">Health</a></li>
-			<li><a href="#category" data-ajax="false">Education</a></li>
-			<li><a href="#category" data-ajax="false">Music</a></li>
-			<li><a href="#category" data-ajax="false">Photography</a></li>
-			<li><a href="#category" data-ajax="false">Other</a></li>
-		</ul>
-		</div>
-		</div>
-	<!-- browse page footer -->		
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-<!-- Category page -->
-	<div data-role="page" id="category" data-add-back-btn="true">
-		
-		<div data-role="header" data-position="fixed">
-			<h1>An app for my apps</h1>
-		</div>
-			
-		<div data-role="content">
-			<p>No data found</p>
-		</div>	
-		<!-- category page footer -->	
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	
-<!-- Search page -->
-<div data-role="page" id="Search" data-add-back-btn="true">
-		
-		<div data-role="header" data-position="fixed">
-			<h1>An app for my apps</h1>
-		</div>
-			
-		<div data-role="content">
-			<p>No data found</p>
-		</div>	
-		<!-- search page footer -->	
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>					
-<!-- JavaScript under here -->
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-	<script type="text/javascript" src="JS/main.js"></script>
-	
+</div>
 
+<!-- Search Field -->
+<input type="search" name="search" id="search-basic" value="" placeholder="Search Ideas" />
+
+<!-- Browse -->
+<div data-role="browse">
+<ul data-role="listview">
+	<li data-role="list-divider">Browse Categories</li>
+	<li><a href="additem.html">Games</a></li>
+	<li><a href="additem.html">Productivity</a></li>
+	<li><a href="additem.html">Health</a></li>
+	<li><a href="additem.html">Education</a></li>
+	<li><a href="additem.html">Music</a></li>
+	<li><a href="additem.html">Photography</a></li>
+	<li><a href="additem.html">Other</a></li>
+</ul>
+</div>	
 </body>
 </html>
