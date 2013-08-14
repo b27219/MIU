@@ -1,6 +1,6 @@
 //Sabra May
-//VFW 1308
-//Aug 8, 2013
+//VFW 1307
+//Aug 1, 2013
 
 //Wait until DOM is ready
 
