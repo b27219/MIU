@@ -43,14 +43,16 @@ Aug 15, 2013 -->
 		</div>	
 		<!-- Search field -->
 		<input type="search" name="search" id="search-basic" value="" placeholder="Search Ideas" />
+		<a href="#" data-role="button" data-mini="true" data-inline="true">Search</a>
 							
 		<!-- index page footer -->		
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
+					<li><a href="#Info" data-icon="info">Info</a></li>
 				</ul>
 			</div>
 		</div>	
@@ -58,7 +60,7 @@ Aug 15, 2013 -->
 <!-- additem page -->	
 	<div data-role="page" id="additem" data-add-back-btn="true">
 	
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-position="fixed" data-theme="e">
 			<h1>An app for my apps</h1>
 		</div>
 		
@@ -71,8 +73,9 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
+					<li><a href="#Info" data-icon="info">Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -80,15 +83,15 @@ Aug 15, 2013 -->
 <!-- browse page -->
 	<div data-role="page" id="Browse" data-add-back-btn="true">
 	
-		<div data-role="header" data-position="fixed">
-			<h1>An app for my apps</h1>
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Browse Ideas</h1>
 		</div>
 		
 		<div data-role="content">
 			
 		<div data-role="browse">
 		<ul data-role="listview">
-			<li data-role="list-divider" data-theme="e">Browse Categories</li>
+			<!--<li data-role="list-divider" data-theme="a">Browse Categories</li>-->
 			<li><a href="#category" data-ajax="false">Games</a></li>
 			<li><a href="#category" data-ajax="false">Productivity</a></li>
 			<li><a href="#category" data-ajax="false">Health</a></li>
@@ -104,8 +107,9 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
+					<li><a href="#Info" data-icon="info">Info</a></li>
 				</ul>
 			</div>
 		</div>
@@ -113,8 +117,8 @@ Aug 15, 2013 -->
 <!-- Category page -->
 	<div data-role="page" id="category" data-add-back-btn="true">
 		
-		<div data-role="header" data-position="fixed">
-			<h1>An app for my apps</h1>
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Categories</h1>
 		</div>
 			
 		<div data-role="content">
@@ -125,17 +129,18 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
+					<li><a href="#Info" data-icon="info">Info</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	
 <!-- Search page -->
-<div data-role="page" id="Search" data-add-back-btn="true">
+<!--<div data-role="page" id="Search" data-add-back-btn="true">
 		
-		<div data-role="header" data-position="fixed">
+		<div data-role="header" data-position="fixed" data-theme="e">
 			<h1>An app for my apps</h1>
 		</div>
 			
@@ -143,16 +148,63 @@ Aug 15, 2013 -->
 			<p>No data found</p>
 		</div>	
 		<!-- search page footer -->	
-		<div data-role="footer" data-position="fixed" data-id="additem">
+		<!--<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Search" data-icon="search">Search</a></li>
+					<li><a href="#Info" data-icon="info">Info</a></li>
 				</ul>
 			</div>
 		</div>
-	</div>					
+	</div>-->
+
+<!-- News page -->
+	<<div data-role="page" id="news" data-add-back-btn="true">
+			
+			<div data-role="header" data-position="fixed" data-theme="e">
+				<h1>News</h1>
+			</div>
+				
+			<div data-role="content">
+				<p>No data found</p>
+			</div>	
+			<!-- news page footer -->	
+			<div data-role="footer" data-position="fixed" data-id="additem">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#index" data-icon="home">Home</a></li>
+						<li><a href="#news" data-icon="grid">News</a></li>
+						<li><a href="#Browse" data-icon="bars">Browse</a></li>
+						<li><a href="#Info" data-icon="info">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>	
+
+<!-- Info page -->
+	<div data-role="page" id="Info" data-add-back-btn="true">
+			
+			<div data-role="header" data-position="fixed" data-theme="e">
+				<h1>Info</h1>
+			</div>
+				
+			<div data-role="content">
+				<p>No data found</p>
+			</div>	
+			<!-- info page footer -->	
+			<div data-role="footer" data-position="fixed" data-id="additem">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#index" data-icon="home">Home</a></li>
+						<li><a href="#news" data-icon="grid">News</a></li>
+						<li><a href="#Browse" data-icon="bars">Browse</a></li>
+						<li><a href="#Info" data-icon="info">Info</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>					
 <!-- JavaScript under here -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
