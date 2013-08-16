@@ -39,9 +39,11 @@ Aug 15, 2013 -->
 		<div data-role="content">
 			<center><img src="images/lightbulb.png"></center>
 			<p>Store all the great ideas you have for creating new apps!</p>
-			<p><a href="additem.html" data-role="button">Add Idea</a></p>
+			<p><a href="additem.html" data-ajax="false" data-role="button">Add Idea</a></p>
 		</div>	
-		<!-- Search field -->
+		
+		<ul data-role="listview" data-inset="true" data-inline="true" data-filter="true">
+		<!-- Search field 
 		<input type="search" name="search" id="search-basic" value="" placeholder="Search Ideas" />
 		<a href="#" data-role="button" data-mini="true" data-inline="true">Search</a>
 							
@@ -50,9 +52,8 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Info" data-icon="info">Info</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>	
@@ -73,9 +74,8 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Info" data-icon="info">Info</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
@@ -84,127 +84,474 @@ Aug 15, 2013 -->
 	<div data-role="page" id="Browse" data-add-back-btn="true">
 	
 		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>Browse Ideas</h1>
+			<h1>Browse</h1>
 		</div>
 		
 		<div data-role="content">
-			
+		<!-- List of Categories -->	
 		<div data-role="browse">
-		<ul data-role="listview">
-			<!--<li data-role="list-divider" data-theme="a">Browse Categories</li>-->
-			<li><a href="#category" data-ajax="false">Games</a></li>
-			<li><a href="#category" data-ajax="false">Productivity</a></li>
-			<li><a href="#category" data-ajax="false">Health</a></li>
-			<li><a href="#category" data-ajax="false">Education</a></li>
-			<li><a href="#category" data-ajax="false">Music</a></li>
-			<li><a href="#category" data-ajax="false">Photography</a></li>
-			<li><a href="#category" data-ajax="false">Other</a></li>
-		</ul>
+			<ul data-role="listview" data-inset="true" data-filter="true"></ul>
 		</div>
-		</div>
+	</div>	
+	
+	<ul data-role="listview" data-inset="true">
+    <li><a href="#games"><img src="images/Games.png" alt="Games" class="ui-li-icon ui-corner-none">Games</a></li>
+    <li><a href="#productivity"><img src="images/productivity.png" alt="Productivity" class="ui-li-icon">Productivity</a></li>
+    <li><a href="#health"><img src="images/Health.png" alt="Health" class="ui-li-icon">Health</a></li>
+    <li><a href="#education"><img src="images/Education.png" alt="Education" class="ui-li-icon">Education</a></li>
+    <li><a href="#music"><img src="images/Music.png" alt="Music" class="ui-li-icon ui-corner-none">Music</a></li>
+    <li><a href="#photography"><img src="images/Photography.png" alt="Photography" class="ui-li-icon ui-corner-none">Photography</a></li>
+    <li><a href="#other"><img src="images/Other.png" alt="Other" class="ui-li-icon">Other</a></li>
+</ul>
 	<!-- browse page footer -->		
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Info" data-icon="info">Info</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
-<!-- Category page -->
-	<div data-role="page" id="category" data-add-back-btn="true">
+<!-- Games page -->
+	<div data-role="page" id="games" data-add-back-btn="true">
 		
 		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>Categories</h1>
+			<h1>Games</h1>
 		</div>
 			
 		<div data-role="content">
-			<p>No data found</p>
+			<center><img src="images/games.png"></center>
 		</div>	
-		<!-- category page footer -->	
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite game</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
+		<!-- games page footer -->	
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Info" data-icon="info">Info</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
-	</div>
-	
-<!-- Search page -->
-<!--<div data-role="page" id="Search" data-add-back-btn="true">
+	</div>	
+
+<!-- Productivity page -->
+	<div data-role="page" id="productivity" data-add-back-btn="true">
 		
 		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>An app for my apps</h1>
+			<h1>Productivity</h1>
 		</div>
 			
 		<div data-role="content">
-			<p>No data found</p>
-		</div>	
-		<!-- search page footer -->	
-		<!--<div data-role="footer" data-position="fixed" data-id="additem">
+			<center><img src="images/productivity.png"></center>
+		</div>
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite app</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
+	
+		<!-- productivity page footer -->	
+		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#news" data-icon="grid">News</a></li>
 					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#Info" data-icon="info">Info</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
-	</div>-->
+	</div>	
 
-<!-- News page -->
-	<<div data-role="page" id="news" data-add-back-btn="true">
+<!-- Health page -->
+	<div data-role="page" id="health" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Health</h1>
+		</div>
 			
-			<div data-role="header" data-position="fixed" data-theme="e">
-				<h1>News</h1>
+		<div data-role="content">
+			<center><img src="images/health.png"></center>
+		</div>
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite app</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
+	
+		<!-- health page footer -->	
+		<div data-role="footer" data-position="fixed" data-id="additem">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#Browse" data-icon="bars">Browse</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
 			</div>
-				
-			<div data-role="content">
-				<p>No data found</p>
-			</div>	
-			<!-- news page footer -->	
-			<div data-role="footer" data-position="fixed" data-id="additem">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#index" data-icon="home">Home</a></li>
-						<li><a href="#news" data-icon="grid">News</a></li>
-						<li><a href="#Browse" data-icon="bars">Browse</a></li>
-						<li><a href="#Info" data-icon="info">Info</a></li>
-					</ul>
-				</div>
-			</div>
+		</div>
+	</div>	
+
+<!-- Education page -->
+	<div data-role="page" id="education" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Education</h1>
+		</div>
+			
+		<div data-role="content">
+			<center><img src="images/education.png"></center>
 		</div>	
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite game</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
 
-<!-- Info page -->
-	<div data-role="page" id="Info" data-add-back-btn="true">
+		<!-- education page footer -->	
+		<div data-role="footer" data-position="fixed" data-id="additem">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#Browse" data-icon="bars">Browse</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+
+<!-- Music page -->
+	<div data-role="page" id="music" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Music</h1>
+		</div>
+			
+		<div data-role="content">
+			<center><img src="images/music.png"></center>
+		</div>
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite game</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
+	
+		<!-- music page footer -->	
+		<div data-role="footer" data-position="fixed" data-id="additem">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#Browse" data-icon="bars">Browse</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+
+<!-- Photography page -->
+	<div data-role="page" id="photography" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Photography</h1>
+		</div>
+			
+		<div data-role="content">
+			<center><img src="images/photography.png"></center>
+		</div>
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite game</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
+	
+		<!-- photography page footer -->	
+		<div data-role="footer" data-position="fixed" data-id="additem">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#Browse" data-icon="bars">Browse</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+
+<!-- Other page -->
+	<div data-role="page" id="other" data-add-back-btn="true">
+		
+		<div data-role="header" data-position="fixed" data-theme="e">
+			<h1>Other</h1>
+		</div>
+			
+		<div data-role="content">
+			<center><img src="images/other.png"></center>
+		</div>
+		<div data-role="collapsible-set">
+		<div data-role="collapsible">
+        <h2>Idea One</h2>
+        <ul data-role="listview">
+            <li><p>Date: 07-30-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 7</p>
+				<p>Notes: This will be great!</p>
+			</li>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Two</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-01-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 1</p>
+				<p>Notes: Something cool</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+    <div data-role="collapsible">
+        <h2>Idea Three</h2>
+        <ul data-role="listview">
+            <ul data-role="listview">
+            <li><p>Date: 08-10-13</p>
+				<p>Device: iPhone, iPad</p>
+				<p>Priority: 8</p>
+				<p>Notes: This will be my favorite game</p>
+			</li>
+        </ul>
+        </ul>
+    </div>
+	</div>
+	
+		<!-- other page footer -->	
+		<div data-role="footer" data-position="fixed" data-id="additem">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#Browse" data-icon="bars">Browse</a></li>
+					<li><a href="#About" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+
+<!-- About page -->
+	<div data-role="page" id="About" data-add-back-btn="true">
 			
 			<div data-role="header" data-position="fixed" data-theme="e">
-				<h1>Info</h1>
+				<h1>About</h1>
 			</div>
-				
 			<div data-role="content">
-				<p>No data found</p>
+			<div data-role="controlgroup">
+				<a href="index.html" data-role="button">Home</a>
+				<a href="#" data-role="button">Bronze App</a>
+				<a href="https://github.com/b27219/MIU" data-role="button">Github Repository</a>
+			</div>
+			<h4><em>All icons were made with Photoshop. I also received a lot of assistance and explanation from Steven Palomino</em></h4>
 			</div>	
-			<!-- info page footer -->	
+		
+			<!-- About page footer -->	
 			<div data-role="footer" data-position="fixed" data-id="additem">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#index" data-icon="home">Home</a></li>
-						<li><a href="#news" data-icon="grid">News</a></li>
 						<li><a href="#Browse" data-icon="bars">Browse</a></li>
-						<li><a href="#Info" data-icon="info">Info</a></li>
+						<li><a href="#About" data-icon="info">About</a></li>
 					</ul>
 				</div>
 			</div>
-		</div>					
+			</div>					
 <!-- JavaScript under here -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
