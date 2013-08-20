@@ -39,7 +39,7 @@ Aug 15, 2013 -->
 		<div data-role="content">
 			<center><img src="images/lightbulb.png"></center>
 			<p>Store all the great ideas you have for creating new apps!</p>
-			<p><a href="additem.html" data-ajax="false" data-role="button">Add Idea</a></p>
+			<p><a href="#additem" data-ajax="false" data-role="button">Add Idea</a></p>
 		</div>	
 		
 		<ul data-role="listview" data-inset="true" data-inline="true" data-filter="true">
@@ -66,9 +66,60 @@ Aug 15, 2013 -->
 		</div>
 		
 		<div data-role="content">
-			<center><img src="images/lightbulb.png"></center>
-			<center><p>Here you could add your great idea</p></center>
-		</div>	
+			
+			<form action="" method="post" id="recordideaform">
+				<p>* Required fields</p>
+				<input type="submit" value="Save Idea" data-theme="e" data-inline="true"/>
+				<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
+				<!-- Idea input field -->
+				<div data-role="fieldcontain">
+					<label for="ideaIdea">*Idea:</label>
+					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true"/>
+				</div>
+				<!-- Date -->
+				<div data-role="fieldcontain">
+					<label for="ideadate">*Today's Date:</label>
+					<input type="date" data-clear-btn="true" name="ideadate" id="ideadate" value="" />
+				</div>
+				<!-- Category Select -->
+				<div data-role="fieldcontain">
+					<label for="ideacategory">*Choose a Category:</label>
+					<select name="ideacategory" id="ideacategory" data-native-menu="false">
+						<option data-placeholder="true">Please select one</option>
+						<option value="Games">Games</option>
+						<option value="Productivity">Productivity</option>
+						<option value="Health">Health</option>
+						<option value="Music">Music</option>
+						<option value="Education">Education</option>
+						<option value="Photography">Photography</option>
+						<option value="Other">Other</option>
+					</select>	
+				</div>
+				<!-- Choose a device -->
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Choose a Device:</legend>
+						<input type="checkbox" value="device" name="iPhone" id="iPhone" checked="true" class="custom"/>
+						<label for="iPhone">iPad</label>
+						<input type="checkbox" value="device" name="iPad" id="iPad" checked="true" class="custom"/>
+						<label for="iPad">iPad</label>
+					</fieldset>
+				</div>
+				<!-- Priority Range -->
+				<div data-role="fieldcontain">
+					<label for="ideapriority">Priority:</label>
+					<input type="range" name="ideapriority" id="ideapriority" value="5" min="0" max="10"/>
+				</div>
+				<!-- Notes textarea -->
+				<div data-role="fieldcontain">
+					<label for="ideanotes">Notes:</label>
+					<textarea></textarea>
+				</div>
+				<!-- Save and reset buttons -->				
+				</div>
+					<input type="submit" value="Save Idea" data-theme="e" data-inline="true"/>
+					<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
+					
 	<!-- additem page footer -->	
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
