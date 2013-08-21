@@ -31,16 +31,21 @@ fieldset{
 	border: 2px solid #6a9fea;
 }
 
-legend{
-	text-transform: lowercase;
+label{
+	text-transform: uppercase;
 	color: #ff9900;
-	background: #fff;
 	padding: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	
-
 }
+legend{
+	text-transform: uppercase;
+	color: #ff9900;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
 
 header h1{
 	text-transform: lowercase;
@@ -84,6 +89,13 @@ input.submit:active{
 	color: white;
 	background: #FFED86;
 }
-
-
+p{
+color: #ff9900;	
+}
+label.error{
+	display: block; margin: 10px 0; #cc0000;
+}
+/*#errorslink{
+	display:none;
+}*/
 
