@@ -4,30 +4,30 @@ Project 2
 Aug 15, 2013 -->
 
 <!doctype html>  
-<html lang="en">
-<head>
-
-	<meta charset="utf-8">
+	<html lang="en">
+	<head>
 	
-	<title>An app for all my apps</title>
+		<meta charset="utf-8">
+		
+		<title>An app for all my apps</title>
+		
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+		<link rel="stylesheet" href="CSS/style.css" />
+		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
 	
-	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
-	
-	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<link rel="stylesheet" href="CSS/style.css" />
-	
-	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-	<script src="js/libs/modernizr.custom.min.js"></script>
-
-</head>
-<body>
+	</head>
+	<body>
 <!-- index page -->
 	
 	<div data-role="page" id="index">
@@ -39,16 +39,6 @@ Aug 15, 2013 -->
 		<div data-role="content">
 			<center><img src="images/lightbulb.png"></center>
 			<p>Store all the great ideas you have for creating new apps!</p>
-<<<<<<< HEAD
-			<p><a href="#additem" data-ajax="false" data-role="button">Add Idea</a></p>
-		</div>	
-		
-		<ul data-role="listview" data-inset="true" data-inline="true" data-filter="true">
-		<!-- Search field 
-		<input type="search" name="search" id="search-basic" value="" placeholder="Search Ideas" />
-		<a href="#" data-role="button" data-mini="true" data-inline="true">Search</a>
-							
-=======
 			<p><a href="#additem" data-ajax="false" data-role="button">Add Idea</a></p>	
 		<ul data-role="listview" data-inset="true" data-inline="true" data-filter="true">
 
@@ -65,17 +55,12 @@ Aug 15, 2013 -->
 			    <li><a href="#other"><img src="images/Other.png" alt="Other" class="ui-li-icon">Other</a></li>
 			</ul>
 		</div>					
->>>>>>> gh-pages
 		<!-- index page footer -->		
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -89,17 +74,6 @@ Aug 15, 2013 -->
 		</div>
 		
 		<div data-role="content">
-<<<<<<< HEAD
-			
-			<form action="" method="post" id="recordideaform">
-				<p>* Required fields</p>
-				<input type="submit" value="Save Idea" data-theme="e" data-inline="true"/>
-				<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
-				<!-- Idea input field -->
-				<div data-role="fieldcontain">
-					<label for="ideaIdea">*Idea:</label>
-					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true"/>
-=======
 			<center><img src="images/lightbulb.png"></center>
 			<form action="" method="post" id="recordideaform">
 				<p>* Required fields</p>
@@ -107,25 +81,16 @@ Aug 15, 2013 -->
 				<div data-role="fieldcontain">
 					<label for="ideaIdea">*Idea:</label>
 					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true" class="required"/>
->>>>>>> gh-pages
 				</div>
 				<!-- Date -->
 				<div data-role="fieldcontain">
 					<label for="ideadate">*Today's Date:</label>
-<<<<<<< HEAD
-					<input type="date" data-clear-btn="true" name="ideadate" id="ideadate" value="" />
-=======
 					<input type="date" data-clear-btn="true" name="ideadate" id="ideadate" value="" class="required date"/>
->>>>>>> gh-pages
 				</div>
 				<!-- Category Select -->
 				<div data-role="fieldcontain">
 					<label for="ideacategory">*Choose a Category:</label>
-<<<<<<< HEAD
-					<select name="ideacategory" id="ideacategory" data-native-menu="false">
-=======
 					<select name="ideacategory" id="ideacategory" data-native-menu="false" class="required">
->>>>>>> gh-pages
 						<option data-placeholder="true">Please select one</option>
 						<option value="Games">Games</option>
 						<option value="Productivity">Productivity</option>
@@ -157,27 +122,19 @@ Aug 15, 2013 -->
 					<textarea></textarea>
 				</div>
 				<!-- Save and reset buttons -->				
-				</div>
-<<<<<<< HEAD
-					<input type="submit" value="Save Idea" data-theme="e" data-inline="true"/>
-					<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
-=======
+				
 					<input type="submit" value="Save Idea" id="submit" data-theme="e" data-inline="true"/>
 					<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
 					<a href="#ideaformerrors" id="errorslink" data-rel="dialog" data-transition="pop">Open Errors</a>	
+				</div>
 				</form>
->>>>>>> gh-pages
 					
 	<!-- additem page footer -->	
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -194,8 +151,6 @@ Aug 15, 2013 -->
 		<!-- List of Categories -->	
 		<div data-role="browse">
 			
-<<<<<<< HEAD
-=======
 		</div>
 		<ul data-role="listview" data-inset="true" data-filter="true">
 	    <li><a href="#games"><img src="images/Games.png" alt="Games" class="ui-li-icon ui-corner-none">Games</a></li>
@@ -206,30 +161,13 @@ Aug 15, 2013 -->
 	    <li><a href="#photography"><img src="images/Photography.png" alt="Photography" class="ui-li-icon ui-corner-none">Photography</a></li>
 	    <li><a href="#other"><img src="images/Other.png" alt="Other" class="ui-li-icon">Other</a></li>
 		</ul>
->>>>>>> gh-pages
 		</div>
-		
-	
-	<ul data-role="listview" data-inset="true" data-filter="true">
-    <li><a href="#games"><img src="images/Games.png" alt="Games" class="ui-li-icon ui-corner-none">Games</a></li>
-    <li><a href="#productivity"><img src="images/productivity.png" alt="Productivity" class="ui-li-icon">Productivity</a></li>
-    <li><a href="#health"><img src="images/Health.png" alt="Health" class="ui-li-icon">Health</a></li>
-    <li><a href="#education"><img src="images/Education.png" alt="Education" class="ui-li-icon">Education</a></li>
-    <li><a href="#music"><img src="images/Music.png" alt="Music" class="ui-li-icon ui-corner-none">Music</a></li>
-    <li><a href="#photography"><img src="images/Photography.png" alt="Photography" class="ui-li-icon ui-corner-none">Photography</a></li>
-    <li><a href="#other"><img src="images/Other.png" alt="Other" class="ui-li-icon">Other</a></li>
-	</ul>
-	</div>
 	<!-- browse page footer -->		
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -286,11 +224,7 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -349,11 +283,7 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -412,11 +342,7 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -475,11 +401,7 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
@@ -538,163 +460,12 @@ Aug 15, 2013 -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
-<<<<<<< HEAD
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#About" data-icon="info">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>	
-
-<!-- Photography page -->
-	<div data-role="page" id="photography" data-add-back-btn="true">
-		
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>Photography</h1>
-		</div>
-			
-		<div data-role="content">
-			<center><img src="images/photography.png"></center>
-		</div>
-		<div data-role="collapsible-set">
-		<div data-role="collapsible">
-        <h2>Idea One</h2>
-        <ul data-role="listview">
-            <li><p>Date: 07-30-13</p>
-				<p>Device: iPhone, iPad</p>
-				<p>Priority: 7</p>
-				<p>Notes: This will be great!</p>
-			</li>
-        </ul>
-    </div>
-    <div data-role="collapsible">
-        <h2>Idea Two</h2>
-        <ul data-role="listview">
-            <ul data-role="listview">
-            <li><p>Date: 08-01-13</p>
-				<p>Device: iPhone, iPad</p>
-				<p>Priority: 1</p>
-				<p>Notes: Something cool</p>
-			</li>
-        </ul>
-        </ul>
-    </div>
-    <div data-role="collapsible">
-        <h2>Idea Three</h2>
-        <ul data-role="listview">
-            <ul data-role="listview">
-            <li><p>Date: 08-10-13</p>
-				<p>Device: iPhone, iPad</p>
-				<p>Priority: 8</p>
-				<p>Notes: This will be my favorite game</p>
-			</li>
-        </ul>
-        </ul>
-    </div>
-	</div>
-	
-		<!-- photography page footer -->	
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-=======
 					<li><a href="#News" data-icon="bars">News</a></li>
->>>>>>> gh-pages
 					<li><a href="#About" data-icon="info">About</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>	
-<<<<<<< HEAD
-
-<!-- Other page -->
-	<div data-role="page" id="other" data-add-back-btn="true">
-		
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>Other</h1>
-		</div>
-			
-		<div data-role="content">
-			<center><img src="images/other.png"></center>
-		</div>
-		<div data-role="collapsible-set">
-		<div data-role="collapsible">
-        <h2>Idea One</h2>
-        <ul data-role="listview">
-            <li><p>Date: 07-30-13</p>
-				<p>Device: iPhone, iPad</p>
-				<p>Priority: 7</p>
-				<p>Notes: This will be great!</p>
-			</li>
-        </ul>
-    </div>
-    <div data-role="collapsible">
-        <h2>Idea Two</h2>
-        <ul data-role="listview">
-            <ul data-role="listview">
-            <li><p>Date: 08-01-13</p>
-				<p>Device: iPhone, iPad</p>
-				<p>Priority: 1</p>
-				<p>Notes: Something cool</p>
-			</li>
-        </ul>
-        </ul>
-    </div>
-    <div data-role="collapsible">
-        <h2>Idea Three</h2>
-        <ul data-role="listview">
-            <ul data-role="listview">
-            <li><p>Date: 08-10-13</p>
-				<p>Device: iPhone, iPad</p>
-				<p>Priority: 8</p>
-				<p>Notes: This will be my favorite game</p>
-			</li>
-        </ul>
-        </ul>
-    </div>
-	</div>
-	
-		<!-- other page footer -->	
-		<div data-role="footer" data-position="fixed" data-id="additem">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#Browse" data-icon="bars">Browse</a></li>
-					<li><a href="#About" data-icon="info">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>	
-
-<!-- About page -->
-	<div data-role="page" id="About" data-add-back-btn="true">
-			
-			<div data-role="header" data-position="fixed" data-theme="e">
-				<h1>About</h1>
-			</div>
-			<div data-role="content">
-			<div data-role="controlgroup">
-				<a href="index.html" data-role="button">Home</a>
-				<a href="#" data-role="button">Bronze App</a>
-				<a href="https://github.com/b27219/MIU" data-role="button">Github Repository</a>
-			</div>
-			<h4><em>All icons were made with Photoshop. I also received a lot of assistance and explanation from Steven Palomino</em></h4>
-			</div>	
-		
-			<!-- About page footer -->	
-			<div data-role="footer" data-position="fixed" data-id="additem">
-				<div data-role="navbar">
-					<ul>
-						<li><a href="#index" data-icon="home">Home</a></li>
-						<li><a href="#Browse" data-icon="bars">Browse</a></li>
-						<li><a href="#About" data-icon="info">About</a></li>
-					</ul>
-				</div>
-			</div>
-			</div>					
-=======
 
 <!-- Photography page -->
 	<div data-role="page" id="photography" data-add-back-btn="true">
@@ -841,14 +612,14 @@ Aug 15, 2013 -->
 	</div>	
 
 <!-- News Page -->
-		<div data-role="page" id="News" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>News</h1>
-		</div>
-		<div data-role="content">
-			<center><img src="images/lightbulb.png"></center>
-			<center><p>Browse recent ideas</p></center>
-		</div>	
+	<div data-role="page" id="News" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed" data-theme="e">
+		<h1>News</h1>
+	</div>
+	<div data-role="content">
+		<center><img src="images/lightbulb.png"></center>
+		<center><p>Browse recent ideas</p></center>
+	</div>	
 	<!-- About page footer -->	
 	<div data-role="footer" data-position="fixed" data-id="additem">
 	<div data-role="navbar">
@@ -873,12 +644,11 @@ Aug 15, 2013 -->
 			</ul>	
 		</div>
 	</div>								
->>>>>>> gh-pages
 <!-- JavaScript under here -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-<script type="text/javascript" src="JS/libs/jquery.validate.min.js"></script>
-<script type="text/javascript" src="JS/Sample-main.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/Sample-main.js"></script>
 	
 
 </body>

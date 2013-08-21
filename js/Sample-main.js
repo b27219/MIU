@@ -3,7 +3,7 @@ $('#home').on('pageinit', function(){
 	
 });	
 		
-$('#addItem').on('pageinit', function(){
+$('#additem').on('pageinit', function(){
 
 		var ideaForm = $('#recordideaform'),
 			errorslink = $('#errorslink')
@@ -25,22 +25,22 @@ $('#addItem').on('pageinit', function(){
 		}
 	});
 	
-	function a(x) {
+	function ge(x) {
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
 	
 //Find value of checkboxes
 function getiPhoneValues() {
-		if($('iPhone').checked) {
-			iPhoneValues = $("iPhone").value;
+		if(ge('iPhone').checked) {
+			iPhoneValues = ge("iPhone").value;
 		}else {
 			iPhoneValues= "No";
 		}
 	}
 		function getiPadValues() {
-			if($("iPad").checked) {
-				iPadValues = $("iPad").value;
+			if(a("iPad").checked) {
+				iPadValues = ge("iPad").value;
 			}else {
 				iPadValues = "No";
 			}
@@ -80,17 +80,17 @@ var storeData = function(key){
 	getiPhoneValues();
 	getiPadValues();
 	var item = {};
-		item.idea 			=["Idea:", $('idea').value];
-		item.date			=["Today's Date;", $('date').value];
-		item.category		=["Choose a Category:", $('select').value];
+		item.idea 			=["Idea:", ge('idea').value];
+		item.date			=["Today's Date;", ge('date').value];
+		item.category		=["Choose a Category:", ge('select').value];
 		item.iPhone			=["iPhone", iPhoneValues];
 		item.iPad			=["iPad", iPadValues];
-		item.priority 		=["priority:", $('priority').value];
-		item.notes			=["Notes:",$('notes').value];
+		item.priority 		=["priority:", ge('priority').value];
+		item.notes			=["Notes:",ge('notes').value];
 				
 	localStorage.setItem(id, JSON.stringify(item));
-	alert("Idea Saved!");
-};
+	alert("Idea Saved!");	
+	}
 			
 //function deleteItem			
 var	deleteItem = function (){
@@ -116,11 +116,11 @@ var clearLocal = function() {
 };
 
 //Set click events
-	var displayLink = $("displayLink");
-	displayLink.addEventListener("click", getData);
-	var clearLink = $("clearLink");
-	clearLink.addEventListener("click", clearLocal);
-	var submit = $("submit");
-	submit.addEventListener("click", validate);
+//	var displayLink = $("displayLink");
+//	displayLink.addEventListener("click", getData);
+//	var clearLink = $("clearLink");
+//	clearLink.addEventListener("click", clearLocal);
+//	var submit = $("submit");
+//	submit.addEventListener("click", validate);
 
 
