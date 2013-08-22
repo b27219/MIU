@@ -25,31 +25,31 @@ $('#additem').on('pageinit', function(){
 		}
 	});
 	
-	function ge(x) {
+	function a(x) {
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
 	
+	
+	
+	//any other code needed for addItem page goes here
+	
+});
 //Find value of checkboxes
 function getiPhoneValues() {
-		if(ge('iPhone').checked) {
-			iPhoneValues = ge("iPhone").value;
+		if($('iPhone').checked) {
+			iPhoneValues = $("iPhone").value;
 		}else {
 			iPhoneValues= "No";
 		}
 	}
 		function getiPadValues() {
-			if(a("iPad").checked) {
-				iPadValues = ge("iPad").value;
+			if($("iPad").checked) {
+				iPadValues = $("iPad").value;
 			}else {
 				iPadValues = "No";
 			}
-	}	
-	
-	//any other code needed for addItem page goes here
-	
-});
-
+	}
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
 //function autoFillData		
@@ -80,13 +80,13 @@ var storeData = function(key){
 	getiPhoneValues();
 	getiPadValues();
 	var item = {};
-		item.idea 			=["Idea:", ge('idea').value];
-		item.date			=["Today's Date;", ge('date').value];
-		item.category		=["Choose a Category:", ge('select').value];
+		item.idea 			=["Idea:", $('#ideaIdea').val()];
+		item.date			=["Today's Date;", $('#ideadate').val()];
+		item.category		=["Choose a Category:", $('#ideacategory').val()];
 		item.iPhone			=["iPhone", iPhoneValues];
 		item.iPad			=["iPad", iPadValues];
-		item.priority 		=["priority:", ge('priority').value];
-		item.notes			=["Notes:",ge('notes').value];
+		item.priority 		=["priority:", $('#ideapriority').val()];
+		item.notes			=["Notes:",$('#notes').val()];
 				
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Idea Saved!");	
