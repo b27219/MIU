@@ -1,6 +1,6 @@
 /*	Sabra May
-	VFW 1308
-	Project 1 */
+	MIU 1308
+	Project 3 */
 	
 body {
 	font: 14px Helvetica, Arial, sans-serif;
@@ -93,9 +93,11 @@ p{
 color: #ff9900;	
 }
 label.error{
-	display: block; margin: 10px 0; #cc0000;
+	display: block; 
+	margin: 10px 0; 
+	color: #cc0000;
 }
-/*#errorslink{
+#errorslink{
 	display:none;
-}*/
+}
 

@@ -1,7 +1,7 @@
 <!-- Sabra May
 MIU 1308
-Project 2
-Aug 15, 2013 -->
+Project 3
+Aug 22, 2013 -->
 
 <!doctype html>  
 	<html lang="en">
@@ -80,7 +80,7 @@ Aug 15, 2013 -->
 				<!-- Idea input field -->
 				<div data-role="fieldcontain">
 					<label for="ideaIdea">*Idea:</label>
-					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true" class="required"/>
+					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true" class="required" placeholder="ex. My great new game!"/>
 				</div>
 				<!-- Date -->
 				<div data-role="fieldcontain">
@@ -89,8 +89,8 @@ Aug 15, 2013 -->
 				</div>
 				<!-- Category Select -->
 				<div data-role="fieldcontain">
-					<label for="ideacategory">*Choose a Category:</label>
-					<select name="ideacategory" id="ideacategory" data-native-menu="false" class="required">
+					<label for="ideacategory">Choose a Category:</label>
+					<select name="ideacategory" id="ideacategory" data-native-menu="false">
 						<option data-placeholder="true">Please select one</option>
 						<option value="Games">Games</option>
 						<option value="Productivity">Productivity</option>
@@ -106,7 +106,7 @@ Aug 15, 2013 -->
 					<fieldset data-role="controlgroup">
 						<legend>Choose a Device:</legend>
 						<input type="checkbox" value="device" name="iPhone" id="iPhone" checked="true" class="custom"/>
-						<label for="iPhone">iPad</label>
+						<label for="iPhone">iPhone</label>
 						<input type="checkbox" value="device" name="iPad" id="iPad" checked="true" class="custom"/>
 						<label for="iPad">iPad</label>
 					</fieldset>
@@ -126,7 +126,7 @@ Aug 15, 2013 -->
 					<input type="submit" value="Save Idea" id="submit" data-theme="e" data-inline="true"/>
 					<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
 					<a href="#ideaformerrors" id="errorslink" data-rel="dialog" data-transition="pop">Open Errors</a>	
-				</div>
+				</div>	
 				</form>
 					
 	<!-- additem page footer -->	
@@ -619,6 +619,38 @@ Aug 15, 2013 -->
 	<div data-role="content">
 		<center><img src="images/lightbulb.png"></center>
 		<center><p>Browse recent ideas</p></center>
+		<ul data-role="listview" data-inset="true">
+			<li><a href="#games">
+				<img src="images/Games.png">
+				<h2>My game</h2>
+				<p>This will be a great game!</p>
+				<p>August 22, 2013</p></a>
+			</li>
+			<li><a href="#music">
+				<img src="images/Music.png">
+				<h2>Organize my stuff</h2>
+				<p>All my music will be organized</p>
+				<p>August 18, 2013</p></a>
+			</li>
+			<li><a href="#health">
+				<img src="images/Health.png">
+				<h2>Meal planner</h2>
+				<p>This will be so easy to use</p>
+				<p>August 12, 2013</p></a>
+			</li>
+			<li><a href="#music">
+				<img src="images/Music.png">
+				<h2>Music</h2>
+				<p>Stream all music!</p>
+				<p>July 22, 2013</p></a>
+			</li>
+			<li><a href="#photography">
+				<img src="images/Photography.png">
+				<h2>Photography</h2>
+				<p>Something as easy to use as Instagram</p>
+				<p>July 16, 2013</p></a>
+			</li>
+		</ul>
 	</div>	
 	<!-- About page footer -->	
 	<div data-role="footer" data-position="fixed" data-id="additem">

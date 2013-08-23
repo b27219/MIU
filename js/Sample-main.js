@@ -1,3 +1,7 @@
+var parseIdeaForm = function(data) {
+	
+};
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 	
@@ -11,6 +15,7 @@ $('#additem').on('pageinit', function(){
 		    ideaForm.validate({
 			invalidHandler: function(form, validator) {
 				errorslink.click();
+				var html = "";
 				for(var key in validator.submitted) {
 					var label = $('label[for^="' + key +'"]').not('[generated]');
 					var legend = label.closest('fieldset').find('ui-controlgroup-label');
@@ -114,6 +119,7 @@ var clearLocal = function() {
 			return false;
 		}
 };
+
 
 //Set click events
 //	var displayLink = $("displayLink");
