@@ -1,7 +1,7 @@
 <!-- Sabra May
 MIU 1308
-Project 2
-Aug 15, 2013 -->
+Project 3
+Aug 22, 2013 -->
 
 <!doctype html>  
 <html lang="en">
@@ -93,7 +93,7 @@ Aug 15, 2013 -->
 					<fieldset data-role="controlgroup">
 						<legend>Choose a Device:</legend>
 						<input type="checkbox" value="device" name="iPhone" id="iPhone" />
-						<label for="iPhone">iPad</label>
+						<label for="iPhone">iPhone</label>
 						<input type="checkbox" value="device" name="iPad" id="iPad" />
 						<label for="iPad">iPad</label>
 					</fieldset>
@@ -112,7 +112,7 @@ Aug 15, 2013 -->
 				</div>
 					<input type="submit" value="Save Idea" data-theme="e" />
 					<input type="reset" value="Reset Form" data-theme="c" />
-		</div>	
+			
 	<!-- additem page footer -->	
 		<div data-role="footer" data-position="fixed" data-id="additem">
 			<div data-role="navbar">
@@ -133,27 +133,17 @@ Aug 15, 2013 -->
 		<div data-role="browse">
 		<ul data-role="listview" data-inset="true" data-filter="true"></ul>
 		<center>
-				 <div data-role="content">
-            <fieldset class="ui-grid-c">
-                <div class="ui-block-a">
-                    <a href="#games"><img alt="" src="images/Games.png"  /></a>
-                    <h4>Games</h4>
-                    <a href="#productivity"><img alt="" src="images/productivity.png"  /></a>
-                    <h4>Productivity</h4>
-                    <a href="#health"> <img alt="" src="images/Health.png" /></a>
-                    <h4>Health</h4>
-                    <a href="#other"><img alt="" src="images/Other.png" /></a>
-                    <h4>Other</h4>
-                </div>
-              <div class="ui-block-c"></div>
-                <div class="ui-block-b">
-                    <a href="#education"><img alt="" src="images/Education.png"  /></a>
-                    <h4>Education</h4>
-                    <a href="#music"><img alt="" src="images/Music.png" /></a>
-                    <h4>Music</h4>
-                    <a href="#photography"><img alt="" src="images/Photography.png"  /></a>
-                    <h4>Photography</h4>
-                </div>
+		<div data-role="content">
+			<fieldset class="ui-grid-b">
+                <div class="ui-block-a"> Games<a href="#games" data-ajax="false"><img src="images/Games.png"/></a></div>
+                <div class="ui-block-b"> Education<a href="#education" data-ajax="false"><img src="images/Education.png"/></a></div>
+                <div class="ui-block-a"> Other<a href="#other" data-ajax="false"><img src="images/Other.png"/></a></div>	                
+                <div class="ui-block-b"> Music<a href="#music" data-ajax="false"><img src="images/Music.png"/></a></div>
+                <div class="ui-block-a"> Health<a href="#health" data-ajax="false"><img src="images/Health.png"/></a></div>
+                <div class="ui-block-b"> Photography<a href="#photography" data-ajax="false"><img src="images/Photography.png"/></a></div>
+                <div class="ui-block-a"> Productivity<a href="#productivity" data-ajax="false"><img src="images/productivity.png"/></a></div>
+			<div class="ui-block-c"></div>
+			<div class="ui-block-b"></div>
             </fieldset>
             </fieldset>
 		</center>
@@ -264,10 +254,10 @@ Aug 15, 2013 -->
 		</div>
 		
 <!-- Health page -->
-	<div data-role="page" id="healthy" data-add-back-btn="true">
+	<div data-role="page" id="health" data-add-back-btn="true">
 			
 			<div data-role="header" data-position="fixed" data-theme="e">
-				<h1>Healthy</h1>
+				<h1>Health</h1>
 			</div>
 				
 			<div data-role="content">

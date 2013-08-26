@@ -1,33 +1,33 @@
 <!-- Sabra May
 MIU 1308
-Project 2
-Aug 15, 2013 -->
+Project 3
+Aug 22, 2013 -->
 
 <!doctype html>  
-<html lang="en">
-<head>
-
-	<meta charset="utf-8">
+	<html lang="en">
+	<head>
 	
-	<title>An app for all my apps</title>
+		<meta charset="utf-8">
+		
+		<title>An app for all my apps</title>
+		
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
+		<link rel="stylesheet" href="CSS/style.css" />
+		
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
 	
-	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
-	
-	<!-- StyleSheets under here -->
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-	<link rel="stylesheet" href="CSS/style.css" />
-	
-	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-	<script src="js/libs/modernizr.custom.min.js"></script>
-
-</head>
-<body>
+	</head>
+	<body>
 <!-- index page -->
 	
 	<div data-role="page" id="index">
@@ -80,7 +80,7 @@ Aug 15, 2013 -->
 				<!-- Idea input field -->
 				<div data-role="fieldcontain">
 					<label for="ideaIdea">*Idea:</label>
-					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true" class="required"/>
+					<input type="text" name="ideaIdea" id="ideaIdea" data-clear-btn="true" class="required" placeholder="ex. My great new game!"/>
 				</div>
 				<!-- Date -->
 				<div data-role="fieldcontain">
@@ -89,8 +89,8 @@ Aug 15, 2013 -->
 				</div>
 				<!-- Category Select -->
 				<div data-role="fieldcontain">
-					<label for="ideacategory">*Choose a Category:</label>
-					<select name="ideacategory" id="ideacategory" data-native-menu="false" class="required">
+					<label for="ideacategory">Choose a Category:</label>
+					<select name="ideacategory" id="ideacategory" data-native-menu="false">
 						<option data-placeholder="true">Please select one</option>
 						<option value="Games">Games</option>
 						<option value="Productivity">Productivity</option>
@@ -106,7 +106,7 @@ Aug 15, 2013 -->
 					<fieldset data-role="controlgroup">
 						<legend>Choose a Device:</legend>
 						<input type="checkbox" value="device" name="iPhone" id="iPhone" checked="true" class="custom"/>
-						<label for="iPhone">iPad</label>
+						<label for="iPhone">iPhone</label>
 						<input type="checkbox" value="device" name="iPad" id="iPad" checked="true" class="custom"/>
 						<label for="iPad">iPad</label>
 					</fieldset>
@@ -122,10 +122,11 @@ Aug 15, 2013 -->
 					<textarea></textarea>
 				</div>
 				<!-- Save and reset buttons -->				
-				</div>
+				
 					<input type="submit" value="Save Idea" id="submit" data-theme="e" data-inline="true"/>
 					<input type="reset" value="Reset Form" data-theme="c" data-inline="true"/>
 					<a href="#ideaformerrors" id="errorslink" data-rel="dialog" data-transition="pop">Open Errors</a>	
+				</div>	
 				</form>
 					
 	<!-- additem page footer -->	
@@ -180,6 +181,7 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>		
 			<center><img src="images/games.png"></center>
 		</div>	
 		<div data-role="collapsible-set">
@@ -238,6 +240,7 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>
 			<center><img src="images/productivity.png"></center>
 		</div>
 		<div data-role="collapsible-set">
@@ -297,6 +300,7 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>
 			<center><img src="images/health.png"></center>
 		</div>
 		<div data-role="collapsible-set">
@@ -356,6 +360,7 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>
 			<center><img src="images/education.png"></center>
 		</div>	
 		<div data-role="collapsible-set">
@@ -415,6 +420,7 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>
 			<center><img src="images/music.png"></center>
 		</div>
 		<div data-role="collapsible-set">
@@ -474,7 +480,8 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
-			<center><img src="images/photography.png"></center>
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>
+		<center><img src="images/photography.png"></center>
 		</div>
 		<div data-role="collapsible-set">
 		<div data-role="collapsible">
@@ -533,7 +540,8 @@ Aug 15, 2013 -->
 		</div>
 			
 		<div data-role="content">
-			<center><img src="images/other.png"></center>
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>
+		<center><img src="images/other.png"></center>
 		</div>
 		<div data-role="collapsible-set">
 		<div data-role="collapsible">
@@ -590,6 +598,7 @@ Aug 15, 2013 -->
 			<h1>About</h1>
 		</div>
 		<div data-role="content">
+		<a href="#index" data-ajax="false" class="image"><img src="images/branding.png" /></a>		
 		<div data-role="controlgroup">
 			<a href="index.html" data-role="button">Home</a>
 			<a href="bronze_index.html" data-ajax="false" data-role="button">Bronze App</a>
@@ -611,15 +620,47 @@ Aug 15, 2013 -->
 	</div>	
 
 <!-- News Page -->
-		<div data-role="page" id="News" data-add-back-btn="true">
-		<div data-role="header" data-position="fixed" data-theme="e">
-			<h1>News</h1>
-		</div>
-		<div data-role="content">
-			<center><img src="images/lightbulb.png"></center>
-			<center><p>Browse recent ideas</p></center>
-		</div>	
-	<!-- About page footer -->	
+	<div data-role="page" id="News" data-add-back-btn="true">
+	<div data-role="header" data-position="fixed" data-theme="e">
+		<h1>News</h1>
+	</div>
+	<div data-role="content">
+		<center><img src="images/lightbulb.png"></center>
+		<center><p>Browse recent ideas</p></center>
+		<ul data-role="listview" data-inset="true">
+			<li><a href="#games">
+				<img src="images/Games.png">
+				<h2>My game</h2>
+				<p>This will be a great game!</p>
+				<p>August 22, 2013</p></a>
+			</li>
+			<li><a href="#music">
+				<img src="images/Music.png">
+				<h2>Organize my stuff</h2>
+				<p>All my music will be organized</p>
+				<p>August 18, 2013</p></a>
+			</li>
+			<li><a href="#health">
+				<img src="images/Health.png">
+				<h2>Meal planner</h2>
+				<p>This will be so easy to use</p>
+				<p>August 12, 2013</p></a>
+			</li>
+			<li><a href="#music">
+				<img src="images/Music.png">
+				<h2>Music</h2>
+				<p>Stream all music!</p>
+				<p>July 22, 2013</p></a>
+			</li>
+			<li><a href="#photography">
+				<img src="images/Photography.png">
+				<h2>Photography</h2>
+				<p>Something as easy to use as Instagram</p>
+				<p>July 16, 2013</p></a>
+			</li>
+		</ul>
+	</div>	
+	<!-- News page footer -->	
 	<div data-role="footer" data-position="fixed" data-id="additem">
 	<div data-role="navbar">
 		<ul>
@@ -646,8 +687,8 @@ Aug 15, 2013 -->
 <!-- JavaScript under here -->
 <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-<script type="text/javascript" src="JS/libs/jquery.validate.min.js"></script>
-<script type="text/javascript" src="JS/Sample-main.js"></script>
+<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/Sample-main.js"></script>
 	
 
 </body>

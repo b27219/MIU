@@ -1,9 +1,13 @@
+var parseIdeaForm = function(data) {
+	
+};
+
 $('#home').on('pageinit', function(){
 	//code needed for home page goes here
 	
 });	
 		
-$('#addItem').on('pageinit', function(){
+$('#additem').on('pageinit', function(){
 
 		var ideaForm = $('#recordideaform'),
 			errorslink = $('#errorslink')
@@ -11,6 +15,7 @@ $('#addItem').on('pageinit', function(){
 		    ideaForm.validate({
 			invalidHandler: function(form, validator) {
 				errorslink.click();
+				var html = "";
 				for(var key in validator.submitted) {
 					var label = $('label[for^="' + key +'"]').not('[generated]');
 					var legend = label.closest('fieldset').find('ui-controlgroup-label');
@@ -30,6 +35,11 @@ $('#addItem').on('pageinit', function(){
 		return theElement;
 	}
 	
+	
+	
+	//any other code needed for addItem page goes here
+	
+});
 //Find value of checkboxes
 function getiPhoneValues() {
 		if($('iPhone').checked) {
@@ -44,12 +54,7 @@ function getiPhoneValues() {
 			}else {
 				iPadValues = "No";
 			}
-	}	
-	
-	//any other code needed for addItem page goes here
-	
-});
-
+	}
 //The functions below can go inside or outside the pageinit function for the page in which it is needed.
 
 //function autoFillData		
@@ -80,17 +85,17 @@ var storeData = function(key){
 	getiPhoneValues();
 	getiPadValues();
 	var item = {};
-		item.idea 			=["Idea:", $('idea').value];
-		item.date			=["Today's Date;", $('date').value];
-		item.category		=["Choose a Category:", $('select').value];
+		item.idea 			=["Idea:", $('#ideaIdea').val()];
+		item.date			=["Today's Date;", $('#ideadate').val()];
+		item.category		=["Choose a Category:", $('#ideacategory').val()];
 		item.iPhone			=["iPhone", iPhoneValues];
 		item.iPad			=["iPad", iPadValues];
-		item.priority 		=["priority:", $('priority').value];
-		item.notes			=["Notes:",$('notes').value];
+		item.priority 		=["priority:", $('#ideapriority').val()];
+		item.notes			=["Notes:",$('#notes').val()];
 				
 	localStorage.setItem(id, JSON.stringify(item));
-	alert("Idea Saved!");
-};
+	alert("Idea Saved!");	
+	}
 			
 //function deleteItem			
 var	deleteItem = function (){
@@ -115,12 +120,13 @@ var clearLocal = function() {
 		}
 };
 
+
 //Set click events
-	var displayLink = $("displayLink");
-	displayLink.addEventListener("click", getData);
-	var clearLink = $("clearLink");
-	clearLink.addEventListener("click", clearLocal);
-	var submit = $("submit");
-	submit.addEventListener("click", validate);
+//	var displayLink = $("displayLink");
+//	displayLink.addEventListener("click", getData);
+//	var clearLink = $("clearLink");
+//	clearLink.addEventListener("click", clearLocal);
+//	var submit = $("submit");
+//	submit.addEventListener("click", validate);
 
 

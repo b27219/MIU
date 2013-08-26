@@ -7,14 +7,14 @@
 window.addEventListener("DOMContentLoaded", function() {
 	
 	//getElementById Function
-	function $(x) {
+	function ge(x) {
 		var theElement = document.getElementById(x);
 		return theElement;
 	}
 	
 	function makeCats() {
 		var formTag = document.getElementsByTagName("form"), 
-			selectLi = $('selectList'),
+			selectLi = ge('selectList'),
 			makeSelect = document.createElement('select');
 			makeSelect.setAttribute("id", "select");
 		for (var i=0, j=catGroups.length; i<j; i++) {
@@ -32,15 +32,15 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	console.log(checkboxes);*/
 	function getiPhoneValues() {
-		if($('iPhone').checked) {
-			iPhoneValues = $("iPhone").value;
+		if(ge('iPhone').checked) {
+			iPhoneValues = ge("iPhone").value;
 		}else {
 			iPhoneValues= "No";
 		}
 	}
 		function getiPadValues() {
-			if($("iPad").checked) {
-				iPadValues = $("iPad").value;
+			if(ge("iPad").checked) {
+				iPadValues = ge("iPad").value;
 			}else {
 				iPadValues = "No";
 			}
@@ -49,18 +49,18 @@ window.addEventListener("DOMContentLoaded", function() {
 	function toggleControls(n){
 	switch(n) {
 		case "on":
-			$('ideaForm').style.display = "none";
-			$('clearLink').style.display = "inline";
-			$('displayLink').style.display = "none";
-			//$('addNew').style.display = "inline";
-			//$('items').style.display = "none";
+			ge('ideaForm').style.display = "none";
+			ge('clearLink').style.display = "inline";
+			ge('displayLink').style.display = "none";
+			//ge('addNew').style.display = "inline";
+			//ge('items').style.display = "none";
 			break;
 		case "off":
-			$('ideaForm').style.display = "block";
-			$('clearLink').style.display = "inline";
-			$('displayLink').style.display = "inline";
-			//$('addNew').style.display = "none";
-			//$('items').style.display = "none";
+			ge('ideaForm').style.display = "block";
+			ge('clearLink').style.display = "inline";
+			ge('displayLink').style.display = "inline";
+			//ge('addNew').style.display = "none";
+			//ge('items').style.display = "none";
 			break;	
 	default:
 		return false;		
@@ -83,13 +83,13 @@ window.addEventListener("DOMContentLoaded", function() {
 	getiPhoneValues();
 	getiPadValues();
 	var item = {};
-		item.idea 			=["Idea:", $('idea').value];
-		item.date			=["Today's Date;", $('date').value];
-		item.category		=["Choose a Category:", $('select').value];
+		item.idea 			=["Idea:", ge('idea').value];
+		item.date			=["Today's Date;", ge('date').value];
+		item.category		=["Choose a Category:", ge('select').value];
 		item.iPhone			=["iPhone", iPhoneValues];
 		item.iPad			=["iPad", iPadValues];
-		item.priority 		=["priority:", $('priority').value];
-		item.notes			=["Notes:",$('notes').value];
+		item.priority 		=["priority:", ge('priority').value];
+		item.notes			=["Notes:",ge('notes').value];
 				
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Idea Saved!");	
@@ -107,7 +107,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	var makeList = document.createElement('ul');
 	makeDiv.appendChild(makeList);
 	document.body.appendChild(makeDiv);
-	$('items').style.display = "block";
+	ge('items').style.display = "block";
 	for (var i=0, len=localStorage.length; i<len; i++) {
 		var makeli = document.createElement('li');
 		var linksLi = document.createElement('li');
@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	//Auto Populate Local Storage
 	function autoFillData() {
 		//Store the JSON OBJECT into local storage
-		for(var n in json) {
+		for(var n in JSON) {
 			var id = Math.floor(Math.random() *100000001);
 			localStorage.setItem(id, JSON.stringify(json[n]));
 		}
@@ -184,23 +184,23 @@ window.addEventListener("DOMContentLoaded", function() {
 		toggleControls("off");
 		
 		//populate the form fields with current local Storage values
-		$('idea').value = item.idea[1];
-		$('date').value = item.date[1];
-		$('select').value = item.category[1];
+		ge('idea').value = item.idea[1];
+		ge('date').value = item.date[1];
+		ge('select').value = item.category[1];
 		if(item.iPhone[1] == "Yes") {
-			$('iPhone').setAttribute("checked", "checked");
+			ge('iPhone').setAttribute("checked", "checked");
 		}
 		if(item.iPad[1] =="Yes") {
-			$('iPad').setAttribute("checked", "checked");
+			ge('iPad').setAttribute("checked", "checked");
 		}
-		$('priority').value = item.priority[1];
-		$('notes').value = item.notes[1];
+		ge('priority').value = item.priority[1];
+		ge('notes').value = item.notes[1];
 		
 		//remove inital listener from the input 'save idea' button
 		submit.removeEventListener("click", storeData);
 		//change submit button value to say edit 
-		$('submit').value = "Edit Idea";
-		var editSubmit = $('submit');
+		ge('submit').value = "Edit Idea";
+		var editSubmit = ge('submit');
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when we save the data we edited
 		editSubmit.addEventListener("click", validate);
@@ -219,9 +219,9 @@ window.addEventListener("DOMContentLoaded", function() {
 	
 	function validate(e) {
 		//Define the elements we want to check
-		var getIdea 	= $('idea');
-		var getDate 	= $('date');
-		var getCategory = $('select');
+		var getIdea 	= ge('idea');
+		var getDate 	= ge('date');
+		var getCategory = ge('select');
 		
 		//Reset error messages
 		errMsg.innerHTML = "";
@@ -274,7 +274,7 @@ window.addEventListener("DOMContentLoaded", function() {
 	makeCats();
 	iPhoneValue = "No";
 	iPadValue = "No";
-	errMsg = $('errors');
+	errMsg = ge('errors');
 	
 	//Clear Data
 	var clearLocal = function() {
@@ -289,10 +289,10 @@ window.addEventListener("DOMContentLoaded", function() {
 	};
 	
 	//Set click events
-	var displayLink = $("displayLink");
+	var displayLink = ge("displayLink");
 	displayLink.addEventListener("click", getData);
-	var clearLink = $("clearLink");
+	var clearLink = ge("clearLink");
 	clearLink.addEventListener("click", clearLocal);
-	var submit = $("submit");
+	var submit = ge("submit");
 	submit.addEventListener("click", validate);
 });
