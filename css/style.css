@@ -1,7 +1,9 @@
 /*	Sabra May
 	MIU 1308
-	Project 3 */
-	
+	Project 4 */
+
+
+/*	
 body {
 	font: 14px Helvetica, Arial, sans-serif;
 	color #84d8da;
@@ -17,7 +19,7 @@ li{
 
 form{
 	/*padding: 10px;*/
-	background: #feffff;
+	/*background: #feffff;
 /*background: -moz-linear-gradient(top,  #feffff 0%, #ddf1f9 35%, #a0d8ef 100%);
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(35%,#ddf1f9), color-stop(100%,#a0d8ef));
 background: -webkit-linear-gradient(top,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
@@ -25,7 +27,7 @@ background: -o-linear-gradient(top,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
 background: -ms-linear-gradient(top,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
 background: linear-gradient(to bottom,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 );*/
-}
+/*}
 
 fieldset{
 	border: 2px solid #6a9fea;
@@ -89,6 +91,7 @@ input.submit:active{
 	color: white;
 	background: #FFED86;
 }
+*/
 p{
 color: #ff9900;	
 }
@@ -100,4 +103,9 @@ label.error{
 #errorslink{
 	display:none;
 }
-
+div.ui-submit.ui-btn.ui-shadow.ui-btn-corner-all.ui-btn-inline.ui-btn-up-a {
+	color: #2f9ba7;
+}
+div.ui-slider-track.ui-btn-down-a.ui-btn-corner-all {
+	color: #2f9ba7;
+}
